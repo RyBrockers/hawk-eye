@@ -1,5 +1,6 @@
 import React from 'react';
 import NavBar from './navbar';
+// import { Switch, Route } from 'react-router-dom';
 
 class App extends React.Component {
   constructor(props) {
@@ -11,7 +12,11 @@ class App extends React.Component {
 
   render() {
     return (
-      <NavBar />
+      <React.Fragment>
+        <NavBar />
+        {/* <Switch>
+        </Switch> */}
+      </React.Fragment>
     );
   }
 }
