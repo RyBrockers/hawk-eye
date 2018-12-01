@@ -1,7 +1,8 @@
 import React from 'react';
-import '../Styles/ImagesComponent.css';
+import '../Styles/ImagesComponent.scss';
 import axios from 'axios';
 import ThumbCard from './thumb-card';
+
 
 class ImagesComponent extends React.Component {
   constructor(props) {
