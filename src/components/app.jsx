@@ -2,7 +2,7 @@ import React from 'react';
 import NavBar from './navbar';
 import SignUp from '../components/sign-up';
 import { Switch, Route } from 'react-router-dom';
-import ImagesComponent from '../components/ImagesComponent';
+import ImagesComponent from './ImagesComponent';
 import UploadImage from '../../src/components/uploadImageComponent';
 import Login from '../components/login';
 import TokenManager from '../utils/token-manager';
