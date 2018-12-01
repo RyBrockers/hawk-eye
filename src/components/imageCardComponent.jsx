@@ -2,7 +2,7 @@
 /* eslint-disable react/self-closing-comp */
 /* eslint-disable react/no-unused-state */
 import React from 'react';
-import '../Styles/ImageCardComponent.css';
+import '../Styles/ImageCardComponent.scss';
 import axios from 'axios';
 import TokenManager from '../utils/token-manager';
 import CommentCard from './comment-card';
@@ -30,29 +30,12 @@ class ImageCardComponent extends React.Component {
     });
   };
 
-  handleComment = () => {
-    axios.post(`https://mcr-codes-image-sharing-api.herokuapp.com/images/${this.state.fields._id}/comments`, { content: this.state.comment }, {
+  handleOnClick = (event) => {
+    axios.patch(`/${this.state.fields._id}/likes`, null, {
       headers: {
         Authorization: TokenManager.getToken(),
       },
-    }).then(() => {
-      this.setState({
-        comment: '',
-      });
-      axios.get(`https://mcr-codes-image-sharing-api.herokuapp.com/images/${this.state.fields._id}`)
-        .then((response) => {
-          this.setState({
-            fields: response.data,
-          });
-        });
-    });
-  };
 
-  handleLike = (event) => {
-    axios.patch(`https://mcr-codes-image-sharing-api.herokuapp.com/images/${this.state.fields._id}/likes`, null, {
-      headers: {
-        Authorization: TokenManager.getToken(),
-      },
     })
       .then((response) => {
         this.setState({

@@ -1,0 +1,27 @@
+$highlight: #D30C7B;
+$background:  #E8F1F2;
+$alt-background: #0D324D;
+$text: #222222;
+$alt-text: #042A2B;
+$mainFont: 'Acme', sans-serif;
+
+.thumb-card{
+    margin: 10px;
+    width: 200px;
+    height: 200px;
+    padding: 10px;
+    background-color: $alt-background;
+    border: 3px solid $text;
+    border-radius: 30pt;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: $highlight;
+}
+.image-link {
+    height: auto;
+    width: 90%;
+    max-height: 150px;
+    border: 3px solid $text;
+}
